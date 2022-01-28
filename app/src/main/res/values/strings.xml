@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">HideFace</string>
+    <string name="PUBLISHER_ID" translatable="false">pub-4679171106713552</string>
+    <string name="ADMOB_ID" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="PRIVACY_POLICY_URL">https://yesserly.com/hideface/privacy_policy</string>
+    <string name="INTERSTITIAL_AD_ID">ca-app-pub-3940256099942544/1033173712</string>
+
+    <!-- Actions -->
+    <string name="take_picture">Take Picture</string>
+    <string name="choose_picture">Choose Picture</string>
+    <string name="select_image">Select Image</string>
+    <string name="go_gallery">Go To Gallery</string>
+
+    <!-- Errors -->
+    <string name="camera_not_found">Error: Camera Not Found</string>
+    <string name="detect_faces_error">An Error Occurred</string>
+    <string name="detect_faces_empty">No Face Detected, Try another image</string>
+    <string name="no_face_selected">No Face was selected, Click on the area around the face to select it</string>
+
+    <!-- Messages -->
+    <string name="image_saved">Image Saved</string>
+    <string name="image_not_edited">Image Hasn\'t Been Edited yet</string>
+    <string name="permission_msg">You need this permission for the app to work</string>
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "459876642678",
+    "project_id": "hideface-6b7e5",
+    "storage_bucket": "hideface-6b7e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459876642678:android:74444896b36065f02bd457",
+        "android_client_info": {
+          "package_name": "com.yesserly.hideface"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "459876642678-98ec8m1spd6plbv8lbsfdi5v3ob99783.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFtuhfSy6nNvNl4OAMD5dIpxKDS6DG70k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "459876642678-98ec8m1spd6plbv8lbsfdi5v3ob99783.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
