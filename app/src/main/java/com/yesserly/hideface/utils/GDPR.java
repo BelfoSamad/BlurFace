@@ -26,19 +26,17 @@ public class GDPR {
     private static final String TAG = "GDPR";
 
     private ConsentForm form;
-    private final Context mContext;
     private final SharedPreferencesHelper mSharedPrefs;
 
     @Inject
-    public GDPR(@ApplicationContext Context mContext, SharedPreferencesHelper mSharedPrefs) {
-        this.mContext = mContext;
+    public GDPR(SharedPreferencesHelper mSharedPrefs) {
         this.mSharedPrefs = mSharedPrefs;
     }
 
     /**
      * GDPR CODE
      */
-    public void checkForConsent() {
+    public void checkForConsent(Context mContext) {
         Log.d(TAG, "checkForConsent: Checking For Consent");
         ConsentInformation consentInformation = ConsentInformation.getInstance(mContext);
         String[] publisherIds = {mContext.getResources().getString(R.string.PUBLISHER_ID)};
@@ -60,7 +58,7 @@ public class GDPR {
                         Log.d(TAG, "Requesting Consent");
                         if (ConsentInformation.getInstance(mContext)
                                 .isRequestLocationInEeaOrUnknown()) {
-                            requestConsent();
+                            requestConsent(mContext);
                         } else {
                             mSharedPrefs.setAdPersonalized(true);
                         }
@@ -79,7 +77,7 @@ public class GDPR {
         });
     }
 
-    private void requestConsent() {
+    private void requestConsent(Context mContext) {
         Log.d(TAG, "requestConsent: Requesting Consent");
         URL privacyUrl = null;
         try {
@@ -138,7 +136,7 @@ public class GDPR {
     }
 
 
-    public void loadInterstitialAd(InterstitialAdLoadCallback callback) {
+    public void loadInterstitialAd(Context mContext, InterstitialAdLoadCallback callback) {
         AdRequest.Builder adRequest = new AdRequest.Builder();
         if (!mSharedPrefs.isAdPersonalized())
             adRequest.addNetworkExtrasBundle(AdMobAdapter.class, getNonPersonalizedAdsBundle());

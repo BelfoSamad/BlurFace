@@ -51,9 +51,8 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.Home
     private MainViewModel mViewModel;
     private final ActivityResultLauncher<String> requestPermissionLauncher =
             registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
-                if (!isGranted) {
+                if (!isGranted)
                     Toast.makeText(this, getResources().getString(R.string.permission_msg), Toast.LENGTH_SHORT).show();
-                }
             });
 
 
@@ -70,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.Home
 
         //GDPR Consent
         if (savedInstanceState != null && enableGDPR)
-            gdpr.checkForConsent();//Check for user's consent
+            gdpr.checkForConsent(this);//Check for user's consent
 
         //Initialize Ads
         if (enableAds)

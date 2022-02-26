@@ -154,7 +154,7 @@ public class EditFragment extends Fragment implements OnClickableAreaClickedList
 
         //Init Interstitial Ad
         if (enableGDPR)
-            gdpr.loadInterstitialAd(new InterstitialAdLoadCallback() {
+            gdpr.loadInterstitialAd(requireContext(), new InterstitialAdLoadCallback() {
                 @Override
                 public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
                     super.onAdLoaded(interstitialAd);
